@@ -5,7 +5,6 @@ import './index.css';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 import App from './components/App';
-// import createBook from './actions';
 
 const initialState = {
   books: [
