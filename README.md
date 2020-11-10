@@ -10,7 +10,7 @@
 <!-- PROJECT SHIELDS -->
 
 <p align="center">
-  <a href="https://github.com/jstloyal/react-calculator">
+  <a href="https://github.com/ignatius22/redux-bookstore">
     <img src="https://storage.googleapis.com/blog-images-backup/1*3SVfBkNZI2f-sspiq59xcw.png" alt="React Logo" width="120" height="120">
   </a>
 
@@ -46,8 +46,8 @@ To run 'redux-bookstore app' locally, clone the repository, navigate the cloned 
 #### Follow these commands step by step:
 
 ```
-git@github.com:jstloyal/react-calculator.git
-cd react-calculator.git
+github.com:ignatius22/redux-bookstore.git
+cd redux-bookstore.git
 npm install
 npm start
 ```
@@ -57,7 +57,6 @@ npm start
 This project was built using these technologies.
 
 - React
-- big.js
 - prop-types
 - ESlint
 - VS Code editor
