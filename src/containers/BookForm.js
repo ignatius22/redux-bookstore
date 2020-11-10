@@ -14,30 +14,49 @@ class BookForm extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  async handleChange(e, field) {
+    await this.setState({
+      [field]: e.target.value,
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const { createBook } = this.props;
+    createBook(this.state);
+    this.setState(this.baseState);
+  }
+
+  render() {
+    const { title, category } = this.state;
+    return (
+      <form onSubmit={event => this.handleSubmit(event)}>
+        <label htmlFor="title">
+          Title
+          <input 
+          id="title" 
+          type="text" 
+          name="title"
+          title={title}
+          onChange={event => this.handleChange(event, 'title')}
+           />
+        </label>
+        <select id="category" name="category" category={category} onChange={event => this.handleChange(event, 'category')}>
+          {categories.map(e => <option key={e} value={e}>{e}</option>)}
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
 }
 
-// const BookForm = () => {
-//   const categories = [
-//     'Action',
-//     'Biography',
-//     'History',
-//     'Horror',
-//     'Kids',
-//     'Learning',
-//     'Sci-Fi'
-//   ];
-//   return (
-//     <form>
-//       <label htmlFor="title">
-//         Title
-//         <input id="title" type="text" name="title" />
-//       </label>
-//       <select id="category">
-//         {categories.map(e => <option key={e} value={e}>{e}</option>)}
-//       </select>
-//       <button type="submit">Submit</button>
-//     </form>
-//   );
-// };
+const mapDispatchProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
 
-export default BookForm;
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+export default connect(() => ({}), mapDispatchProps)(BookForm);
