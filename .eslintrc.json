@@ -16,6 +16,7 @@
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
+    "import/no-cycle": ["error", { "maxDepth": 2 }],
     "no-shadow": "off",
     "arrow-parens": ["error", "as-needed"]
   },
