@@ -1,5 +1,4 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Book = ({ book }) => (
@@ -10,32 +9,12 @@ const Book = ({ book }) => (
   </tr>
 );
 
-// const mapStateToProps = state => ({
-//   id: state.id,
-//   title: state.title,
-//   category: state.category,
-// });
-
-// Book.propTypes = {
-//   title: PropTypes.string,
-//   category: PropTypes.string,
-//   id: PropTypes.string,
-// };
-
-// Book.defaultProps = {
-//   title: '',
-//   category: '',
-//   id: '',
-// };
-
-// export default connect(mapStateToProps)(Book);
-
-Book.PropTypes = {
+Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-  }).isRequired
+  }).isRequired,
 };
 
 export default Book;
