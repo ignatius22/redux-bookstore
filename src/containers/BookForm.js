@@ -26,7 +26,7 @@ class BookForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  async handleChange(e) {
+  handleChange(e) {
     const { name } = e.target;
     this.setState({
       [name]: e.target.value,
