@@ -20,7 +20,7 @@ class BookForm extends Component {
       title: '',
       category: categories[0],
     };
-    // this.baseState = this.state;
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -49,9 +49,9 @@ class BookForm extends Component {
       <form onSubmit={event => this.handleSubmit(event)}>
         <label htmlFor="title">
           Title
-          <input 
-            id="title" 
-            type="text" 
+          <input
+            id="title"
+            type="text"
             name="title"
             value={title}
             onChange={event => this.handleChange(event)}
