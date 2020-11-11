@@ -2,12 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions/index';
+import { removeBook, filterBook } from '../actions/index';
 
-function BooksList({ books, removeBook }) {
+function BooksList({  books, removeBook, filterBook, filter, }) {
   const handleRemoveBook = book => {
     removeBook(book);
   };
+
+  const handleFilterChange = e => {
+  const category = e.target.value;
+  filterBook(category);
+};
 
   return (
     <div>
