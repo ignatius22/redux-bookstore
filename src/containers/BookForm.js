@@ -10,7 +10,7 @@ class BookForm extends Component {
       title: '',
       category: categories[0],
     };
-    this.baseState = this.state;
+    // this.baseState = this.state;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -26,7 +26,10 @@ class BookForm extends Component {
     e.preventDefault();
     const { createBook } = this.props;
     createBook(this.state);
-    this.setState(this.baseState);
+    this.setState({
+      title: '',
+      category: categories[0],
+    });
   }
 
   render() {
