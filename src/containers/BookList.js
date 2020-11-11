@@ -16,10 +16,12 @@ function BooksList({ books }) {
         </thead>
         <tbody>
           {
-            books.map((book) => { return <Book
-              book={book}
-              key={book.id}
-            />})
+            books.map(book => (
+              <Book
+                book={book}
+                key={book.id}
+              />
+            ))
           }
         </tbody>
       </table>
@@ -30,7 +32,6 @@ function BooksList({ books }) {
 const mapStateToProps = state => ({
   books: state.books,
 });
-
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
