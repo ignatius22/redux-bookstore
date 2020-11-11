@@ -15,9 +15,10 @@ class BookForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  async handleChange(e, field) {
-    await this.setState({
-      [field]: e.target.value,
+  async handleChange(e) {
+    const { name } = e.target
+    this.setState({
+      [name]: e.target.value,
     });
   }
 
