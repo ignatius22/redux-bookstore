@@ -3,6 +3,16 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
+const categories = [
+  'Action',
+  'Biography',
+  'History',
+  'Horror',
+  'Kids',
+  'Learning',
+  'Sci-Fi',
+];
+
 class BookForm extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +40,7 @@ class BookForm extends Component {
       title: '',
       category: categories[0],
     });
+    e.target.reset();
   }
 
   render() {
@@ -39,14 +50,14 @@ class BookForm extends Component {
         <label htmlFor="title">
           Title
           <input 
-          id="title" 
-          type="text" 
-          name="title"
-          value={title}
-          onChange={event => this.handleChange(event, 'title')}
-           />
+            id="title" 
+            type="text" 
+            name="title"
+            value={title}
+            onChange={event => this.handleChange(event)}
+          />
         </label>
-        <select id="category" name="category" value={category} onChange={event => this.handleChange(event, 'category')}>
+        <select id="category" name="category" value={category} onChange={event => this.handleChange(event)}>
           {categories.map(e => <option key={e} value={e}>{e}</option>)}
         </select>
         <button type="submit">Submit</button>
@@ -63,4 +74,4 @@ BookForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-export default connect(() => ({}), mapDispatchToProps)(BookForm);
+export default connect(null, mapDispatchToProps)(BookForm);
