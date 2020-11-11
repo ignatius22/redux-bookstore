@@ -38,11 +38,11 @@ class BookForm extends Component {
           id="title" 
           type="text" 
           name="title"
-          title={title}
+          value={title}
           onChange={event => this.handleChange(event, 'title')}
            />
         </label>
-        <select id="category" name="category" category={category} onChange={event => this.handleChange(event, 'category')}>
+        <select id="category" name="category" value={category} onChange={event => this.handleChange(event, 'category')}>
           {categories.map(e => <option key={e} value={e}>{e}</option>)}
         </select>
         <button type="submit">Submit</button>
