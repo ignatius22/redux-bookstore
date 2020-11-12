@@ -146,3 +146,26 @@ table {
   color: rgb(161, 161, 161);
   font-size: 15px;
 }
+
+.book-update {
+  display: flex;
+  flex-direction: column;
+}
+
+.chap {
+  color: rgb(148, 148, 148);
+  text-transform: uppercase;
+}
+.num {
+  font-weight: bold;
+}
+.update-button {
+  margin-top: 25px;
+  background-color: #0290ff;
+  border: none;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}

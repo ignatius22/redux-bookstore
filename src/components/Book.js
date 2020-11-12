@@ -23,7 +23,11 @@ const Book = ({ book, removeBook }) => (
         <span>Completed</span>
       </div>
     </div>
-    <div className="book-update">Update Progress</div>
+    <div className="book-update">
+      <div className="chap">current chapter</div>
+      <div className="num"> Chapter 15</div>
+      <button type="button" className="update-button">Update Progress</button>
+    </div>
   </tr>
 );
 
