@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const categories = [
+    'All',
     'Action',
     'Biography',
     'History',
@@ -13,16 +14,12 @@ const CategoryFilter = ({ handleFilterChange }) => {
   ];
 
   return (
-    <select onChange={handleFilterChange} name="category">
-      <option value="All">
-        All
-      </option>
-      {categories.map(category => (
-        <option key={category}>
-          {category}
-        </option>
-      ))}
-    </select>
+    <div>
+      <p>Filter:</p>
+      <select name="category" onChange={handleFilterChange}>
+        {categories.map(e => (<option key={e}>{e}</option>))}
+      </select>
+    </div>
   );
 };
 
