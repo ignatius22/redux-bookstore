@@ -12,6 +12,13 @@ function BooksList({
     removeBook(book);
   };
 
+  let booksfiltered = books;
+  if (filter === 'All') {
+    booksfiltered = books;
+  } else {
+    booksfiltered = books.filter(book => book.category === filter);
+  }
+
   const handleFilterChange = e => {
     filterBook(e.target.value);
   };
@@ -25,15 +32,15 @@ function BooksList({
             <th>Book ID</th>
             <th>Title</th>
             <th>Category</th>
+            <th>Delete Action</th>
           </tr>
         </thead>
         <tbody>
           {
-          books.filter(book => (filter === 'All' ? books : book.category === filter))
-            .map(book => (
-              <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
+            booksfiltered.map(book => (
+              <Book book={book} removeBook={handleRemoveBook} key={book.id} />
             ))
-        }
+          }
         </tbody>
       </table>
     </div>
@@ -46,12 +53,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  removeBook: book => {
-    dispatch(removeBook(book));
-  },
-  filterBook: category => {
-    dispatch(filterBook(category));
-  },
+  removeBook,
+  filterBook,
 });
 
 BooksList.propTypes = {
