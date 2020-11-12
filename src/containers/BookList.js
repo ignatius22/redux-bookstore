@@ -52,10 +52,10 @@ const mapStateToProps = state => ({
   filter: state.filter,
 });
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = {
   removeBook,
   filterBook,
-});
+};
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,

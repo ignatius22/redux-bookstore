@@ -38,6 +38,7 @@ class BookForm extends Component {
     const { createBook } = this.props;
     createBook(this.state);
     this.setState({
+      id: Math.floor(Math.random() * 100),
       title: '',
       category: categories[0],
     });
