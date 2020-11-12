@@ -7,9 +7,9 @@ const CategoryFilter = ({ handleFilterChange }) => {
     'Action',
     'Biography',
     'History',
-    'Horror', 
-    'Kids', 
-    'Learning', 
+    'Horror',
+    'Kids',
+    'Learning',
     'Sci-Fi',
   ];
 

@@ -52,7 +52,7 @@ const mapStateToProps = state => ({
   filter: state.filter,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
   removeBook,
   filterBook,
 });
