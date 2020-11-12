@@ -50,9 +50,9 @@ class BookForm extends Component {
     return (
       <div className="form-container">
         <form className="form_element" onSubmit={event => this.handleSubmit(event)}>
-          <label htmlFor="title" >
+          <label htmlFor="title">
             <input
-              placeholder ="enter book title"
+              placeholder="enter book title"
               className="form_input"
               id="title"
               type="text"

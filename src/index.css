@@ -3,10 +3,9 @@ body {
   overflow-x: hidden;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
-
 }
 
 .navbar {
@@ -20,8 +19,18 @@ body {
 .navbar h1 {
   font-size: 30px;
   font-weight: 700;
-  font-family: Montserratapple-system, system-ui, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    Montserratapple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 .user-img {
@@ -69,12 +78,12 @@ table {
   justify-content: center;
 }
 
-.form-container{
+.form-container {
   padding: 30px;
   width: 100%;
 }
 
-.form_element{
+.form_element {
   position: relative;
   left: 48px;
 }
@@ -105,8 +114,7 @@ table {
   left: 100px;
 }
 
-
-.form_input{
+.form_input {
   width: 500px;
   height: 45px;
   border-radius: 4px;
@@ -146,6 +154,7 @@ table {
 .options {
   margin: 20px 0 10px 0;
 }
+
 .buttons {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 14px;
@@ -159,6 +168,7 @@ table {
   cursor: pointer;
   border: none;
 }
+
 .border-right {
   border-right: 1px solid #ddd;
 }
@@ -211,9 +221,11 @@ table {
   color: rgb(148, 148, 148);
   text-transform: uppercase;
 }
+
 .num {
   font-weight: bold;
 }
+
 .update-button {
   margin-top: 25px;
   background-color: #0290ff;
