@@ -2,15 +2,12 @@ import React from 'react';
 import '../index.css';
 import BooksList from '../containers/BookList';
 import BookForm from '../containers/BookForm';
+import Nav from './Nav';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Bookstore CMS</h1>
-        <p>BOOKS</p>
-        <p>CATEGORIES</p>
-      </header>
+      <Nav />
       <BooksList />
       <BookForm />
     </div>
