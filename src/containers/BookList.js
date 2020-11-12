@@ -5,19 +5,20 @@ import Book from '../components/Book';
 import { removeBook, filterBook } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList({  books, removeBook, filterBook, filter, }) {
+function BooksList({
+  books, filter, removeBook, filterBook,
+}) {
   const handleRemoveBook = book => {
     removeBook(book);
   };
 
   const handleFilterChange = e => {
-    const category = e.target.value;
-    filterBook(category);
-};
+    filterBook(e.target.value);
+  };
 
   return (
     <div>
-    <CategoryFilter handleFilterChange={handleFilterChange} />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
@@ -27,7 +28,7 @@ function BooksList({  books, removeBook, filterBook, filter, }) {
           </tr>
         </thead>
         <tbody>
-        {
+          {
           books.filter(book => (filter === 'All' ? books : book.category === filter))
             .map(book => (
               <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
@@ -41,7 +42,7 @@ function BooksList({  books, removeBook, filterBook, filter, }) {
 
 const mapStateToProps = state => ({
   books: state.books,
-  filter: state.filter
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -49,13 +50,15 @@ const mapDispatchToProps = dispatch => ({
     dispatch(removeBook(book));
   },
   filterBook: category => {
-  dispatch(filterBook(category));
-},
+    dispatch(filterBook(category));
+  },
 });
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   removeBook: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+  filterBook: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
