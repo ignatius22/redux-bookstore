@@ -78,7 +78,7 @@ table {
   justify-content: center;
 }
 
-.form-container {
+/* .form-container {
   padding: 30px;
   width: 100%;
 }
@@ -120,7 +120,7 @@ table {
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   background-color: #fff;
-}
+} */
 
 .book-wrapper {
   width: 80%;
@@ -234,5 +234,57 @@ table {
   height: 33px;
   border-radius: 3px;
   color: #fff;
+  text-transform: uppercase;
+}
+
+/* Form */
+.form-wrapper {
+  padding: 10px 60px;
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+.form-wrapper h2 {
+  width: 200px;
+  height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.form-wrapper form input {
+  width: 50%;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-wrapper form select {
+  margin-left: 50px;
+  width: 20%;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-wrapper form button {
+  width: 19%;
+  height: 42px;
+  box-sizing: border-box;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 50px;
   text-transform: uppercase;
 }
