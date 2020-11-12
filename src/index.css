@@ -1,15 +1,38 @@
-body {
-  margin: 0 auto;
-}
-
-.App {
+.navbar {
   display: flex;
-  flex-direction: column;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 0 70px;
+}
+
+.navbar h1 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Montserratapple-system, system-ui, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.user-img {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+}
+
+.user-img img {
+  width: 100%;
+}
+
+.app-logo {
+  color: #0290ff;
+}
+
+.navbar p {
+  margin-left: 30px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.disabled {
+  opacity: 0.5;
 }
