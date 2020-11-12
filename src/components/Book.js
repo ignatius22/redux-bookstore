@@ -2,11 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, removeBook }) => (
-  <tr>
-    <td>{book.id}</td>
-    <td>{book.title}</td>
-    <td>{book.category}</td>
-    <td><button type="button" onClick={() => removeBook(book)}>Remove</button></td>
+  <tr className="book-wrapper">
+    <div className="book-info">
+      <td className="book-title">{book.title}</td>
+      <td className="book-category">{book.category}</td>
+      <td className="options">
+        <button type="button" className="buttons border-right">
+          Comments
+        </button>
+        <button type="button" onClick={() => removeBook(book)} className="buttons border-right">
+          Remove
+        </button>
+      </td>
+    </div>
+  
+    <div className="book-progress">75%</div>
+    <div className="book-update">Update Progress</div>
   </tr>
 );
 
