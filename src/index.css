@@ -1,7 +1,13 @@
 body {
   background-color: #f5f6fa;
+  overflow-x: hidden;
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+
+}
 
 .navbar {
   display: flex;
@@ -61,6 +67,51 @@ table {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.form-container{
+  padding: 30px;
+  width: 100%;
+}
+
+.form_element{
+  position: relative;
+  left: 48px;
+}
+
+.form_button {
+  width: 184px;
+  height: 45px;
+  margin-left: 1em;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  position: relative;
+  left: 170px;
+}
+
+.form_category {
+  width: 285px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  position: relative;
+  left: 100px;
+}
+
+
+.form_input{
+  width: 500px;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
 }
 
 .book-wrapper {
