@@ -107,3 +107,42 @@ table {
 .border-right {
   border-right: 1px solid #ddd;
 }
+
+.book-progress {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  background-color: #fff;
+  border: 5px solid #307bbe;
+  border-bottom-color: #eee8e8;
+  height: 60px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 60px;
+  margin-right: 0.6em;
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.status-info span {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.status-info span:first-child {
+  color: #121212;
+  font-size: 25px;
+}
+
+.status-info span:nth-child(2) {
+  color: rgb(161, 161, 161);
+  font-size: 15px;
+}
