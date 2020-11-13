@@ -31,13 +31,13 @@
 
 ## About The Project
 
-Book store app build with React-Redux
+A Book store management app build with React-Redux. A web application for managing books. It allows users to organize and manage the bookstore.
 
 <p align="center">
-    <img src="" >
+    <img src="https://res.cloudinary.com/jstloyalty/image/upload/v1605209502/phutriwpn6kwxmpbaqwx.png" >
 </p>
 
-[Project live link](https://bookstore001.herokuapp.com/)
+[Project live link](https://bookstore-final1.herokuapp.com/)
 
 ## Installation
 
