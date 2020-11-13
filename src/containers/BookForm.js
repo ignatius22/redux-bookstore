@@ -69,7 +69,7 @@ class BookForm extends Component {
               </option>
             ))}
           </select>
-          <button type="submit">add book</button>
+          <button type="submit">Add book</button>
         </form>
       </div>
     );
