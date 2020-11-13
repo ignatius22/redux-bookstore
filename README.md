@@ -37,7 +37,7 @@ A Book store management app build with React-Redux. A web application for managi
     <img src="https://res.cloudinary.com/jstloyalty/image/upload/v1605209502/phutriwpn6kwxmpbaqwx.png" >
 </p>
 
-[Project live link]()
+[Project live link](https://bookstore-final1.herokuapp.com/)
 
 ## Installation
 
